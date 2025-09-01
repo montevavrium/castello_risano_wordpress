@@ -1,0 +1,70 @@
+# Файл для автоматического деплоя на Hostinger
+# Поместите этот файл в .github/workflows/deploy.yml в вашем репозитории
+
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js (если используете)
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies (если используете npm/yarn)
+      run: |
+        if [ -f package.json ]; then
+          npm install
+          npm run build
+        fi
+        
+    - name: Deploy to Hostinger via SSH
+      uses: appleboy/ssh-action@v0.1.7
+      with:
+        host: ${{ secrets.HOSTINGER_HOST }}
+        username: ${{ secrets.HOSTINGER_USERNAME }}
+        password: ${{ secrets.HOSTINGER_PASSWORD }}
+        port: ${{ secrets.HOSTINGER_PORT }}
+        script: |
+          cd public_html
+          
+          # Создание бэкапа перед обновлением
+          tar -czf backup_$(date +%Y%m%d_%H%M%S).tar.gz --exclude='backup_*.tar.gz' .
+          
+          # Обновление кода
+          git pull origin main
+          
+          # Установка правильных прав доступа
+          find . -type f -exec chmod 644 {} \;
+          find . -type d -exec chmod 755 {} \;
+          chmod 644 wp-config.php
+          
+          # Очистка кэша (если используете кэширование)
+          if [ -d "wp-content/cache" ]; then
+            rm -rf wp-content/cache/*
+          fi
+          
+          echo "Deployment completed successfully!"
+
+# Настройка секретов в GitHub:
+# 1. Перейдите в Settings > Secrets and variables > Actions
+# 2. Добавьте следующие секреты:
+#    - HOSTINGER_HOST: ssh.hostinger.com (или ваш хост)
+#    - HOSTINGER_USERNAME: ваш SSH username
+#    - HOSTINGER_PASSWORD: ваш SSH password
+#    - HOSTINGER_PORT: 65002 (или ваш порт)
+
+# Альтернативный вариант с SSH ключами (более безопасный):
+# Замените секцию password на:
+# key: ${{ secrets.HOSTINGER_SSH_KEY }}
+# И добавьте секрет HOSTINGER_SSH_KEY с содержимым приватного SSH ключа

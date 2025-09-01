@@ -1,0 +1,106 @@
+# WordPress Core Files
+wp-admin/
+wp-includes/
+wp-content/index.php
+wp-content/languages/
+wp-content/upgrade/
+index.php
+license.txt
+readme.html
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+
+# WordPress Configuration
+wp-config.php
+wp-config-sample.php
+
+# Database
+*.sql
+*.sql.gz
+*.sqlite
+
+# Log Files
+*.log
+error_log
+debug.log
+wp-content/debug.log
+
+# Cache
+wp-content/cache/
+wp-content/w3tc-config/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+
+# Backup Files
+*.bak
+*.backup
+*.old
+*.orig
+*.tmp
+
+# WordPress Uploads (uncomment if you don't want to track uploads)
+# wp-content/uploads/
+
+# Plugin and Theme Development
+wp-content/mu-plugins/
+wp-content/plugins/akismet/
+wp-content/plugins/hello.php
+wp-content/themes/twenty*/
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node.js (if using build tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Composer (if using)
+vendor/
+composer.lock
+
+# Environment Files
+.env
+.env.local
+.env.production
+
+# Build Files
+dist/
+build/
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Security
+.htaccess.bak
+wp-config.php.bak
+
+# Custom
+# Add your custom files/folders here
