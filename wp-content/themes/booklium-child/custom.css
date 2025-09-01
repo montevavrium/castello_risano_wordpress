@@ -1,0 +1,1359 @@
+.text-center {
+	text-align:center;
+}
+
+
+body:not(.wp-admin) .event-button, 
+.wp-block-button__link, 
+.mphb_sc_search-submit-button-wrapper input[type="submit"], 
+body:not(.wp-admin) .hero-text .event-button,
+.loop-room-book-wrapper button[type="submit"],
+.mphb-booking-form .mphb-reserve-btn-wrapper input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #13b0bb;
+    border-radius: 3px;
+    background-color: #13b0bb;
+	background: linear-gradient(90deg, #13b0bb, #0a8a93);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.15;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    animation: fadeInScale 0.6s ease forwards;
+    animation-delay: 0.6s;
+    visibility: visible !important;
+}
+
+body:not(.wp-admin) .event-button:hover,  
+.wp-block-button__link:hover, 
+.mphb_sc_search-submit-button-wrapper input[type="submit"]:hover,
+body:not(.wp-admin) .hero-text .event-button:hover,
+.loop-room-book-wrapper button[type="submit"]:hover,
+.mphb-booking-form .mphb-reserve-btn-wrapper input:hover {
+    background: #fafafa;
+    border-color: #13b0bb;
+    color: #17181a;
+    transform: scale(1.05);
+}
+
+body:not(.wp-admin) .hero-text .event-button, .events-loop .event-button {
+	display:inline-block !important;
+	min-width:220px;
+}
+
+
+
+
+.mphb_sc_search-wrapper input[type="text"], 
+.mphb_sc_search-wrapper select, 
+.mphb_sc_booking_form-wrapper input[type="text"], 
+.mphb_sc_booking_form-wrapper select, 
+.widget_mphb_search_availability_widget input[type="text"], 
+.widget_mphb_search_availability_widget select, .mphb-booking-form input[type="text"], .mphb-booking-form select {
+	border:none !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	height:auto !important;
+}
+
+
+.main-navigation a {
+  text-decoration: none;
+}
+.mphb-datepick-popup {
+	border:none !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.mphb_sc_search-form label {
+	color:#fff;
+}
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+.hero-title {
+  line-height: 1.1; /* Уменьшаем межстрочное расстояние */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для контраста */
+  text-align: center; /* Гарантирует центрирование текста в h2 */
+}
+
+.apart-hotel {
+  font-size: 1.5rem; /* Меньший размер шрифта */
+  font-family: 'Lora', serif; /* Шрифт Lora */
+  letter-spacing: 3px; /* Увеличенный межбуквенный интервал */
+  display: block; /* Делаем блоком для центрирования */
+  margin: 0 auto; /* Центрируем горизонтально */
+  /* background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный фон (закомментирован по вашему примеру) */
+  padding: 5px 15px; /* Легкие отступы */
+  border-radius: 5px; /* Скругленные углы */
+  width: fit-content; /* Ограничиваем ширину содержимым */
+}
+
+.castello-risano {
+  font-size: 4.5rem; /* Большой размер шрифта */
+  font-family: 'Cinzel', serif; /* Шрифт Cinzel */
+  font-weight: 900; /* Максимальная жирность */
+  letter-spacing: 5px; /* Широкий интервал */
+  display: block; /* Делаем блоком для центрирования */
+  margin: 0 auto; /* Центрируем горизонтально */
+  margin-bottom: -90px; /* Подтягиваем следующий элемент ближе */
+  /* background-color: rgba(0, 0, 0, 0.6); /* Более темный фон (закомментирован по вашему примеру) */
+  padding: 10px 20px; /* Большие отступы */
+  border-radius: 8px; /* Скругленные углы */
+  width: fit-content; /* Ограничиваем ширину содержимым */
+}
+
+.hero-subtitle {
+  line-height: 1.2; /* Улучшает расстояние между строками */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для контраста */
+  text-align: center; /* Гарантирует центрирование текста */
+  margin-top: 5px; /* Уменьшаем расстояние от заголовка */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .apart-hotel {
+    font-size: 1rem; /* Меньший размер на мобильных */
+    padding: 3px 10px;
+  }
+
+  .castello-risano {
+    font-size: 2.5rem; /* Уменьшенный размер для бренда */
+    padding: 5px 15px;
+    letter-spacing: 3px;
+    margin-bottom: -5px; /* Меньший отступ на мобильных */
+  }
+
+  .hero-subtitle {
+    margin-top: 3px; /* Еще меньший отступ на мобильных */
+  }
+}
+
+
+
+/*------------------*/
+/* Section styling */
+.castello-welcome-section {
+    background-color: #fff;
+    padding: 80px 20px;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+}
+
+/* Hero Section */
+.castello-hero {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 60px;
+    position: relative;
+    padding: 40px 20px;
+    border-radius: 12px;
+    animation: fadeIn 1s ease forwards;
+}
+.castello-hero-title {
+    font-size: 36px;
+    color: #17181a;
+    margin-bottom: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.castello-hero-text {
+    font-size: 18px;
+    color: #333333;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align: justify;
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+    animation-delay: 0.2s;
+}
+
+
+.hero-image .carousel img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+
+
+/* Apartments Grid */
+.apartments-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Apartment Card */
+.apartment-card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.apartment-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+.apartment-card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.apartment-card-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.apartment-card-title {
+    font-size: 20px;
+    color: #D4A017;
+    margin: 0 0 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.apartment-card-subtitle {
+    font-size: 14px;
+    color: #666666;
+    margin: 0 0 10px;
+    font-style: italic;
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .apartments-grid {
+        flex-wrap: wrap;
+    }
+    .apartment-card {
+        width: 45%;
+    }
+}
+@media (max-width: 768px) {
+    .castello-hero {
+        padding: 20px;
+    }
+    .castello-hero-title {
+        font-size: 28px;
+    }
+    .castello-hero-text {
+        font-size: 16px;
+    }
+    .apartments-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+	.castello-welcome-section {
+		padding-left:0;
+		padding-right:0;
+	}
+    .apartment-card {
+        width: 100%;
+    }
+}
+
+
+
+
+
+/*-----------------------------------------*/
+/* Стили для блока Space for Rent */
+
+  /* Секция Space for Rent */
+  .space-rent-section {
+    background: #fff;
+    padding: 5rem 0;
+  }
+
+  .space-rent-wrapper {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  .space-rent-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: 0.2s;
+  }
+
+  .space-rent-text,
+  .space-rent-image {
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+
+  @media (min-width: 992px) {
+    .space-rent-text,
+    .space-rent-image {
+      flex: 1 0 50%;
+      max-width: calc(50% - 1rem);
+    }
+  }
+
+  /* Текстовая часть */
+  .space-rent-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .space-rent-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .space-rent-description {
+    font-size: 1.125rem;
+    color: #767b80;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .space-rent-subtitle {
+    margin-bottom: 1rem;
+  }
+
+  .space-rent-benefits {
+    margin-bottom: 2rem;
+  }
+
+  .space-rent-button {
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .space-rent-button:hover {
+    background: linear-gradient(90deg, #ffce00, #13b0bb);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(50, 54, 72, 0.3);
+  }
+
+  /* Изображение */
+  .space-rent-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(50, 54, 72, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .space-rent-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .space-rent-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(50, 54, 72, 0.15);
+  }
+
+  .space-rent-image:hover img {
+    transform: scale(1.1);
+  }
+
+  /* Анимация появления */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  
+  
+/*---------------------------------------*/
+/* Стили для блока About Us и фото */
+
+  /* Секция About Us */
+  .about-us-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e7f7f8 100%);
+    padding: 5rem 0;
+  }
+
+  .about-us-wrapper {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  .about-us-title {
+    margin-bottom: 4rem;
+    position: relative;
+  }
+
+  .about-us-title h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #17181a;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  .about-us-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #13b0bb, #ffce00);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+  }
+
+  .about-us-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  .about-us-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(50, 54, 72, 0.1);
+    padding: 2.5rem;
+    margin: 0 15px 2.5rem;
+    flex: 1 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: var(--delay);
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .about-us-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(50, 54, 72, 0.15);
+  }
+
+  @media (min-width: 768px) {
+    .about-us-item {
+      flex: 1 0 50%;
+      max-width: calc(50% - 30px);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .about-us-item {
+      flex: 1 0 33.33%;
+      max-width: calc(33.33% - 30px);
+    }
+  }
+
+  .item-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #17181a;
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+
+  .item-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #13b0bb;
+    transition: width 0.3s ease;
+  }
+
+  .about-us-item:hover .item-title::after {
+    width: 60px;
+  }
+
+  .about-us-item .item-description {
+    font-size: 0.875rem;
+    color: #767b80;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+
+
+
+  /* Секция с фотографиями */
+  .photo-gallery-section {
+    padding: 3.75rem 0;
+    background-color: #fff;
+  }
+
+  .photo-gallery-wrapper {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  .photo-gallery-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  .photo-gallery-item {
+    flex: 1 0 100%;
+    max-width: 100%;
+    margin: 0 10px 20px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: var(--delay);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .photo-gallery-item {
+      flex: 1 0 33.33%;
+      max-width: calc(33.33% - 20px);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .photo-gallery-item {
+      flex: 1 0 16.66%;
+      max-width: calc(16.66% - 20px);
+    }
+  }
+
+  .photo-gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+    transition: transform 0.5s ease; /* Плавное увеличение */
+  }
+
+  .photo-gallery-item:hover img {
+    transform: scale(1.1); /* Лёгкое увеличение */
+  }
+
+
+
+
+/*--------------------------------------------------------------*/
+/* Стили Why you choose us в современном стиле*/
+
+  /* Общий стиль секции */
+  .why-choose-us-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e7f7f8 100%); /* Градиентный фон, как в About Us */
+    padding: 5rem 0; /* Увеличенные отступы для современного вида */
+  }
+
+  .why-choose-us-wrapper {
+    max-width: 1350px; /* Как в .site-main > .type-mphb_room_type */
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  /* Заголовок */
+  .why-choose-us-title {
+    margin-bottom: 4rem; /* Как в About Us */
+    position: relative;
+  }
+
+  .why-choose-us-title h2 {
+    font-size: 2rem; /* Как в About Us */
+    font-weight: 700;
+    color: #17181a;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  /* Подчёркивание заголовка */
+  .why-choose-us-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #13b0bb, #ffce00); /* Градиентное подчёркивание, как в About Us */
+    margin: 1rem auto 0;
+    border-radius: 2px;
+  }
+
+  /* Контейнер для карточек */
+  .why-choose-us-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px; /* Как в .mphb_sc_services-wrapper */
+  }
+
+  /* Карточки */
+  .why-choose-us-item {
+    background: #fff;
+    border-radius: 10px; /* Более современное скругление, как в About Us */
+    box-shadow: 0 5px 15px rgba(50, 54, 72, 0.1); /* Как в About Us */
+    padding: 2.5rem;
+    margin: 0 15px 2.5rem;
+    flex: 1 0 100%;
+    max-width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards; /* Анимация появления, как в About Us */
+    animation-delay: var(--delay);
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .why-choose-us-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(50, 54, 72, 0.15); /* Как в About Us */
+  }
+
+  /* Адаптивность карточек */
+  @media (min-width: 768px) {
+    .why-choose-us-item {
+      flex: 1 0 50%;
+      max-width: calc(50% - 30px);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .why-choose-us-item {
+      flex: 1 0 33.33%;
+      max-width: calc(33.33% - 30px);
+    }
+  }
+
+  /* Иконки */
+  .why-choose-us-item i {
+    font-size: 2.5rem; /* Увеличено для выразительности */
+    color: #13b0bb; /* Акцентный цвет темы */
+    margin-bottom: 1.5rem; /* Увеличено для современного вида */
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .why-choose-us-item:hover i {
+    transform: scale(1.1); /* Лёгкое увеличение иконки при наведении */
+  }
+
+  /* Заголовки карточек */
+  .item-title {
+    font-size: 1.25rem; /* Как в About Us */
+    font-weight: 600;
+    color: #17181a;
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+
+  .item-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: #13b0bb;
+    transition: width 0.3s ease;
+  }
+
+  .why-choose-us-item:hover .item-title::after {
+    width: 60px; /* Расширение подчёркивания при наведении, как в About Us */
+  }
+
+  /* Описание карточек */
+  .item-description {
+    font-size: 0.875rem; /* Как в .loop-room-info-wrapper */
+    color: #767b80; /* Как второстепенный текст в теме */
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+
+  /* Учёт отступов на мобильных */
+  @media (max-width: 768px) {
+    .why-choose-us-item {
+      margin-bottom: 1.875rem; /* Как в .mphb_sc_services-wrapper */
+    }
+  }
+
+
+
+/*-------------------------------------------------------*/
+/* Стили для блока Events */
+
+  /* Секция Events */
+  .events-section {
+    background: #fff;
+    padding: 5rem 0;
+  }
+
+  .events-wrapper {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  .events-title {
+    margin-bottom: 4rem;
+    position: relative;
+  }
+
+  .events-title h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #17181a;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  .events-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #13b0bb, #ffce00);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+  }
+
+  .events-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  .events-item {
+    flex: 1 0 100%;
+    max-width: 100%;
+    margin: 0 15px 2.5rem;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: var(--delay);
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .events-item {
+      flex: 1 0 50%;
+      max-width: calc(50% - 30px);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .events-item {
+      flex: 1 0 33.33%;
+      max-width: calc(33.33% - 30px);
+    }
+  }
+
+  .event-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(50, 54, 72, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .event-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .events-item:hover .event-image img {
+    transform: scale(1.05);
+  }
+
+  .event-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    color: #fff;
+  }
+
+  .event-date {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+  }
+
+  .event-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  .event-content {
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .event-description {
+    font-size: 0.875rem;
+    color: #767b80;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+
+
+/*-----------------------------------------------------------------------------*/
+/* Стили для блока Retreat */
+
+  /* Секция Retreat */
+  .retreat-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e7f7f8 100%);
+    padding: 5rem 0;
+  }
+
+  .retreat-wrapper {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  /* Заголовок */
+  .retreat-title {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .retreat-title h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #17181a;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  .retreat-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #13b0bb, #ffce00);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+  }
+
+  /* Описание */
+  .retreat-description {
+    margin-bottom: 4rem;
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: 0.2s;
+  }
+
+  .retreat-description p {
+    font-size: 1.125rem;
+    color: #767b80;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  .retreat-invitation {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #17181a;
+  }
+
+  .retreat-invitation-link {
+    color: #13b0bb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .retreat-invitation-link:hover {
+    color: #0a8a93;
+  }
+
+  /* Фотографии */
+  .retreat-photos {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  .retreat-photo-item {
+    flex: 1 0 100%;
+    max-width: 100%;
+    margin: 0 15px 2.5rem;
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: var(--delay);
+  }
+
+  @media (min-width: 768px) {
+    .retreat-photo-item {
+      flex: 1 0 50%;
+      max-width: calc(50% - 30px);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .retreat-photo-item {
+      flex: 1 0 25%;
+      max-width: calc(25% - 30px);
+    }
+  }
+
+  .retreat-photo-item img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(50, 54, 72, 0.1);
+  }
+
+  .retreat-photo-content {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .retreat-photo-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #17181a;
+    margin-bottom: 0.5rem;
+  }
+
+  .retreat-photo-date {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #13b0bb;
+    margin-bottom: 0.75rem;
+  }
+
+
+  /* Преимущества */
+  .retreat-benefits {
+    margin-top: 3rem;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #13b0bb 0%, #0a8a93 100%);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(50, 54, 72, 0.2);
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: 0.4s;
+  }
+
+  .benefits-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  .benefits-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -15px;
+  }
+
+  .benefits-item {
+    flex: 1 0 100%;
+    max-width: 100%;
+    margin: 0 15px 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: var(--delay);
+  }
+
+  @media (min-width: 768px) {
+    .benefits-item {
+      flex: 1 0 33.33%;
+      max-width: calc(33.33% - 30px);
+    }
+  }
+
+  .benefits-icon {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+  }
+
+  .benefits-icon i {
+    font-size: 1.5rem;
+    color: #13b0bb;
+  }
+
+  .benefits-item:hover .benefits-icon {
+    transform: scale(1.1);
+  }
+
+  .benefits-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+
+
+@media(max-width:1200px) {
+	.content-area {
+        padding-left: 15px;
+        padding-right:15px;
+    }
+	body:not(.wp-admin) .hero-section {
+		height:auto;
+		width:100%;
+		padding:0;
+	}
+	body:not(.wp-admin) .hero-wrapper {
+        max-width: initial;
+    }
+	.hero-title br {
+		display:none;
+	}
+	body:not(.wp-admin) .hero-title {
+		margin:0;
+	}
+	body:not(.wp-admin) .hero-subtitle {
+		width:100%;
+		margin:0 !important;
+	}
+	body:not(.wp-admin) .hero-text {
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		transform: none;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+		font-size:30px;
+		padding:0;
+	}
+	.carousel-control-next, .carousel-control-prev {
+		z-index:101 !important;
+	}
+	.castello-risano {
+		margin-bottom:0;
+		font-size:45px;
+	}
+	.apart-hotel {
+		margin-bottom:30px;
+	}
+	body:not(.wp-admin) .hero-image {
+		width:100%;
+	}
+}
+
+@media(max-width:992px) {
+	.apart-hotel {
+		font-size: 20px;
+	}
+	.castello-risano {
+        font-size: 35px;
+    }
+	body:not(.wp-admin) .hero-title {
+        font-size: 30px;
+	}
+	body:not(.wp-admin) .hero-subtitle {
+		font-size: 20px;
+	}
+}
+
+@media(max-width:768px) {
+	.about-us-item, .why-choose-us-item, .retreat-photo-item {
+		flex: auto;
+		max-width: 100%;
+	}
+}
+@media(max-width:600px) {
+	.apart-hotel {
+		font-size: 14px;
+	}
+	.castello-risano {
+        font-size: 22px;
+    }
+	body:not(.wp-admin) .hero-title {
+        font-size: 14px;
+	}
+	body:not(.wp-admin) .hero-subtitle {
+		font-size: 14px;
+	}
+	body:not(.wp-admin) .hero-text .event-button {
+		margin-top: 0 !important;
+	}
+}
+
+
+
+.castello-footer {
+    background: linear-gradient(135deg, #0a3d4b, #135e6b);
+    color: #FFFFFF;
+    padding: 60px 20px;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+}
+.castello-footer .footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+.castello-footer .footer-column {
+    flex: 1;
+    min-width: 250px;
+    animation: fadeIn 1s ease forwards;
+}
+.castello-footer .footer-column h3 {
+    font-size: 24px;
+    color: #D4A017;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.castello-footer .footer-column p,
+.castello-footer .footer-column address {
+    font-size: 14px;
+    line-height: 1.8;
+}
+.castello-footer .footer-column address {
+    font-style: normal;
+}
+.castello-footer .footer-column p {
+    margin-bottom: 20px;
+}
+.castello-footer .footer-column a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.castello-footer .footer-column a:hover {
+    color: #ffce00;
+    text-decoration: underline;
+}
+.castello-footer .footer-column span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.castello-footer .footer-column nav {
+    font-size: 14px;
+    line-height: 2;
+}
+.castello-footer .footer-column nav ul {
+    list-style: none;
+    padding: 0;
+}
+.castello-footer .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.castello-footer .social-links a {
+    color: #FFFFFF;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.castello-footer .social-links a:hover {
+    transform: scale(1.2);
+    color: #ffce00;
+}
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Responsive Design */
+@media (max-width: 992px) {
+    .castello-footer .footer-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .castello-footer .footer-column {
+        flex: 1 0 45%;
+        min-width: 200px;
+    }
+    .castello-footer .footer-column:last-child {
+        flex: 1 0 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .castello-footer {
+        padding: 40px 15px;
+    }
+    .castello-footer .footer-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .castello-footer .footer-column {
+        flex: 1 0 100%;
+        min-width: 100%;
+        text-align: center;
+    }
+    .castello-footer .footer-column h3 {
+        font-size: 20px;
+    }
+    .castello-footer .footer-column p,
+    .castello-footer .footer-column address,
+    .castello-footer .footer-column nav {
+        font-size: 13px;
+    }
+    .castello-footer .social-links {
+        justify-content: center;
+    }
+}
+
+.castello-footer .footer-copyright {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #FFFFFF;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+}
+.castello-footer .footer-copyright p {
+    margin: 0;
+}
+@media (max-width: 768px) {
+    .castello-footer .footer-copyright {
+        font-size: 13px;
+        padding: 15px 0;
+        margin-top: 20px;
+    }
+}
+
+

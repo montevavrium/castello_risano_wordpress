@@ -1,0 +1,285 @@
+/*
+ Theme Name: Booklium Child
+ Template: booklium
+ Version: 1.0.1
+*/
+
+/* Импорт стилей родительской темы */
+@import url('../booklium/style.css');
+
+
+/* Apartments Section - Maintain compatibility */
+body:not(.wp-admin) .apartments-section {
+    background: #fff;
+    padding: 5rem 0;
+}
+
+body:not(.wp-admin) .apartments-wrapper {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+body:not(.wp-admin) .apartments-items {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 -5px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+body:not(.wp-admin) .apartments-item {
+    flex: 0 0 20%;
+    max-width: calc(20% - 10px);
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px 0 rgba(50, 54, 72, 0.08);
+    padding: 1.25rem;
+    opacity: 0;
+    animation: fadeInScale 0.6s ease forwards;
+    animation-delay: var(--delay);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+body:not(.wp-admin) .apartments-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(50, 54, 72, 0.15);
+    background-color: #fafafa;
+}
+
+body:not(.wp-admin) .apartments-image {
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    width: 250px;
+    height: 250px;
+}
+
+body:not(.wp-admin) .apartments-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+body:not(.wp-admin) .apartments-item:hover .apartments-image img {
+    transform: scale(1.1);
+}
+
+body:not(.wp-admin) .apartments-title {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #17181a;
+}
+
+/* Адаптивность для Apartments */
+@media (max-width: 991px) {
+    body:not(.wp-admin) .apartments-items {
+        flex-wrap: wrap;
+    }
+    body:not(.wp-admin) .apartments-item {
+        flex: 1 0 45%;
+        max-width: calc(50% - 10px);
+        margin-bottom: 1.25rem;
+    }
+}
+
+@media (max-width: 767px) {
+    body:not(.wp-admin) .apartments-item {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Menu Button Styles - Apply only to frontend */
+body:not(.wp-admin) .main-navigation-wrapper {
+    justify-content: space-between !important; /* Распределяем пространство: пункты по центру, кнопка справа */
+    align-items: center !important;
+}
+
+body:not(.wp-admin) .menu-button {
+    display: flex;
+    align-items: center;
+}
+
+body:not(.wp-admin) .menu-button .event-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #13b0bb;
+    border-radius: 3px;
+    background-color: #13b0bb;
+    color: #fff;
+    font-size: 14px; /* Соответствует размеру текста меню в Booklium */
+    font-weight: 900;
+    line-height: 1.15;
+    padding: 0.75rem 1.25rem; /* Соответствует padding пунктов меню */
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase !important;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin-left: 1rem; /* Отступ от пунктов меню */
+}
+
+body:not(.wp-admin) .menu-button .event-button:hover {
+    background: #fafafa;
+    border-color: #13b0bb;
+    color: #17181a;
+}
+
+body:not(.wp-admin) .menu-button .event-button i {
+    margin-right: 0.9rem; /* Отступ между иконкой и текстом */
+    font-size: 14px;
+}
+
+/* Timetable Styles - Apply only to frontend */
+body:not(.wp-admin) .custom-timetable {
+    max-width: 1350px; /* Как в .apartments-section */
+    margin: 0 auto;
+    padding: 2rem 1.25rem;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px 0 rgba(50, 54, 72, 0.08); /* Тень как в Booklium */
+}
+
+body:not(.wp-admin) .custom-timetable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+body:not(.wp-admin) .custom-timetable th,
+body:not(.wp-admin) .custom-timetable td {
+    padding: 0.75rem 1.25rem; /* Как в пунктах меню Booklium */
+    text-align: center;
+    font-size: 50px; /* Как в .apartments-title */
+    font-weight: 600;
+    color: #17181a; /* Цвет текста Booklium */
+    border: 1px solid #ededed; /* Границы как в Booklium */
+}
+
+body:not(.wp-admin) .custom-timetable th {
+    background: #fafafa; /* Фон как при hover в .apartments-item */
+}
+
+body:not(.wp-admin) .custom-timetable td a {
+    color: #13b0bb; /* Цвет ссылок Booklium */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+body:not(.wp-admin) .custom-timetable td a:hover {
+    color: #0a7b83; /* Чуть темнее для hover */
+}
+
+body:not(.wp-admin) .custom-timetable .mp-timetable-filter {
+    margin-bottom: 1.5rem;
+}
+
+body:not(.wp-admin) .custom-timetable .mp-timetable-filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+body:not(.wp-admin) .custom-timetable .mp-timetable-filter-tabs li {
+    padding: 0;
+}
+
+body:not(.wp-admin) .custom-timetable .mp-timetable-filter-tabs a {
+    display: block;
+    padding: 0.5rem 1rem;
+    background: #13b0bb;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body:not(.wp-admin) .custom-timetable .mp-timetable-filter-tabs a:hover,
+body:not(.wp-admin) .custom-timetable .mp-timetable-filter-tabs .active a {
+    background: #fafafa;
+    color: #17181a;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 767px) {
+    body:not(.wp-admin) .custom-timetable th,
+    body:not(.wp-admin) .custom-timetable td {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+
+    body:not(.wp-admin) .custom-timetable .mp-timetable-filter-tabs {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+body.site-boxed .site-branding .custom-logo-link img, body.site-wide .site-branding .custom-logo-link img {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  max-width: none;
+  width: auto;
+  max-height: 125px !important;
+}
+
+
+
+
+
+.hero-title {
+  line-height: 1.2; /* Улучшает расстояние между строками */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для контраста */
+  text-align: center; /* Гарантирует центрирование текста в h2 */
+}
+
+.apart-hotel {
+  font-size: 1.5rem; /* Меньший размер шрифта */
+  font-family: 'Lora', serif; /* Шрифт Lora */
+  letter-spacing: 3px; /* Увеличенный межбуквенный интервал */
+  display: block; /* Делаем блоком для центрирования */
+  margin: 0 auto; /* Центрируем горизонтально */
+ /* background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный фон */
+  padding: 5px 15px; /* Легкие отступы */
+  border-radius: 5px; /* Скругленные углы */
+  width: fit-content; /* Ограничиваем ширину содержимым */
+}
+
+.castello-risano {
+  font-size: 4.5rem; /* Большой размер шрифта */
+  font-family: 'Cinzel', serif; /* Шрифт Cinzel */
+  font-weight: 900; /* Максимальная жирность */
+  letter-spacing: 5px; /* Широкий интервал */
+  display: block; /* Делаем блоком для центрирования */
+  margin: 0 auto; /* Центрируем горизонтально */
+ /* background-color: rgba(0, 0, 0, 0.6); /* Более темный фон */
+  padding: 10px 20px; /* Большие отступы */
+  border-radius: 8px; /* Скругленные углы */
+  width: fit-content; /* Ограничиваем ширину содержимым */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .apart-hotel {
+    font-size: 1rem; /* Меньший размер на мобильных */
+    padding: 3px 10px;
+  }
+
+  .castello-risano {
+    font-size: 2.5rem; /* Уменьшенный размер для бренда */
+    padding: 5px 15px;
+    letter-spacing: 3px;
+  }
+}
