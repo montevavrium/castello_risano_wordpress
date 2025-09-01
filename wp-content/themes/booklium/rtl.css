@@ -1,0 +1,282 @@
+/*
+Theme Name: Booklium
+
+Adding support for languages written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right-to-Left_Language_Support
+
+*/
+.hidden {
+  display: none;
+}
+
+.bring-to-top {
+  z-index: 10;
+}
+
+body {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+@media (min-width: 992px) {
+  .site {
+    padding-right: 100px;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-header {
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-menu-left .main-navigation-wrapper .main-navigation {
+    left: auto;
+    right: -100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-menu-left .main-navigation-wrapper.toggled .main-navigation {
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-menu-left .primary-menu > li > ul {
+    padding-right: 0;
+  }
+}
+
+.site-menu-left .primary-menu > li > ul .menu-item-has-children,
+.site-menu-left .primary-menu > li > ul .page_item_has_children {
+  padding-right: 0;
+  padding-left: 1.25rem;
+}
+
+.submenu-toggle {
+  right: auto;
+  left: 0;
+}
+
+select {
+  padding-left: 2rem;
+  background-position: top 1rem left 1.25rem;
+}
+
+input.mphb-datepick {
+  padding-left: 2rem;
+  background-position: top .9rem left 1.25rem;
+}
+
+ul, ol {
+  padding-left: 0;
+  padding-right: .875em;
+}
+
+body.blog .site-main > article .entry-meta,
+body.archive .site-main > article .entry-meta,
+body.search .site-main > article .entry-meta {
+  text-align: right;
+}
+
+body.blog .site-main > article .entry-header,
+body.archive .site-main > article .entry-header,
+body.search .site-main > article .entry-header {
+  text-align: right;
+}
+
+.navigation.pagination .nav-links .page-numbers {
+  margin: 0 0 5px 5px;
+}
+
+.navigation.pagination .nav-links .page-numbers.next {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+.navigation.pagination .nav-links .page-numbers.prev {
+  margin-right: 0;
+  margin-left: 15px;
+}
+
+.tags-links .tags-links-title {
+  margin-right: 0;
+  margin-left: 1.25rem;
+}
+
+@media (min-width: 992px) {
+  .post-navigation-wrapper .nav-links {
+    direction: ltr;
+  }
+}
+
+@media (min-width: 768px) {
+  body.blog.blog-featured .site-main article.sticky .post-thumbnail {
+    margin-left: 0;
+    margin-right: 2.5rem;
+  }
+}
+
+body.blog.blog-featured .site-main article.sticky:nth-child(2n - 1) .post-thumbnail {
+  margin-right: 0;
+  margin-left: 2.5rem;
+}
+
+.mphb_sc_room-wrapper .loop-room-wrapper > *,
+.mphb_sc_rooms-wrapper .loop-room-wrapper > *,
+.mphb_sc_search_results-wrapper .loop-room-wrapper > * {
+  margin-left: 0;
+  margin-right: 2.5rem;
+}
+
+.mphb-loop-room-type-attributes li {
+  padding-left: 0;
+  padding-right: 2.1875rem;
+}
+
+.mphb-loop-room-type-attributes li:before {
+  left: auto;
+  right: 0;
+}
+
+.mphb-single-room-type-attributes li:before,
+.mphb-loop-room-type-attributes li:before,
+.loop-room-short-attributes li:before {
+  text-align: right;
+}
+
+.loop-room-short-attributes li {
+  margin: 0 0 0 2.5rem;
+}
+
+.mphb_sc_room-wrapper.is-style-minimalistic .loop-room-short-attributes li,
+.mphb_sc_rooms-wrapper.is-style-minimalistic .loop-room-short-attributes li,
+.mphb_sc_search_results-wrapper.is-style-minimalistic .loop-room-short-attributes li {
+  margin-right: 0;
+}
+
+.mphb_sc_room-wrapper.is-style-grid .mphb-regular-price,
+.mphb_sc_rooms-wrapper.is-style-grid .mphb-regular-price,
+.mphb_sc_search_results-wrapper.is-style-grid .mphb-regular-price {
+  margin-right: 0;
+  margin-left: .625rem;
+}
+
+@media (min-width: 1470px) {
+  .mphb-single-room-type-attributes {
+    padding: 0 2.5rem 0 0;
+    border-left: 0;
+    border-right: 1px solid #ededed;
+  }
+}
+
+@media (min-width: 1470px) {
+  body.single .site-main > .type-mphb_room_type .single-room-calendar-wrapper .mphb-calendar {
+    padding: 0 2.5rem 0 0;
+    border-left: 0;
+    border-right: 1px solid #ededed;
+  }
+}
+
+@media (min-width: 1470px) {
+  body.single .site-main > .type-mphb_room_type .mphb-details-title,
+  body.single .site-main > .type-mphb_room_type .mphb-calendar-title {
+    padding-right: 0;
+    padding-left: 2.5rem;
+  }
+}
+
+.datepick .datepick-nav .datepick-cmd-prev {
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .datepick .datepick-month + .datepick-month {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
+
+.mphbr-accommodation-rating .mphbr-accommodation-rating-wrapper .mphbr-accommodation-rating-value {
+  margin-right: 1rem;
+  margin-left: auto;
+}
+
+.mphb-reviews .mphbr-add-review {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.mphbr-star-rating {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .comment-list .comment-meta {
+    margin-right: 0;
+    margin-left: 1.875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .comment-list .comment-content:before {
+    right: -11px;
+    left: auto;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.mphb-reviews .mphbr_review .children .comment-content:before {
+  left: auto;
+  right: 100px;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.comment-list .edit-link {
+  right: auto;
+  left: .5rem;
+}
+
+.mphb-reviews .mphbr-new-review-box .comment-reply-title {
+  text-align: right;
+}
+
+.mphb-reviews .mphbr-review-form .mphbr-rating-wrapper .mphbr-rating-parameter-wrapper .mphbr-stars {
+  margin-left: 1em;
+  margin-right: 0;
+}
+
+@media (min-width: 768px) {
+  body.taxonomy-archive .page-header.has-image .page-info-wrapper {
+    padding-right: 0;
+    padding-left: 3.75rem;
+  }
+}
+
+@media (min-width: 1470px) {
+  body.taxonomy-archive .page-header.has-image .page-info-wrapper {
+    padding-right: 0;
+    padding-left: 6.25rem;
+  }
+}
+
+.wp-block-getwid-section .wp-block-getwid-section__background-slider {
+  direction: ltr;
+}
+
+.wp-block-getwid-section .wp-block-getwid-section__background-slider .slick-slide {
+  float: left;
+}
